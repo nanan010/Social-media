@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Posts */
+.Post {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Profile Photo and Header */
+.ProfilePhoto {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    float: left;
+}
+
+.ProfilePhoto img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Post Image */
+img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Footer and Actions */
+.PostFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.PostOptions {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.PostOptionsText {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Comment Section */
+.PostComments {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.CommentList {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.IndividualComment {
+    padding: 5px;
+    margin: 5px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.PostCommentInput {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.PostCommentsTextbox {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.PostCommentButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.PostCommentButton:hover {
+    background-color: #0056b3;
+}
+
+/* Emoji Picker */
+.CommentEmoji {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.EmojiPickerContainer {
+    position: relative;
+}
+
+.CommentEmojiPopup {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .Post {
+        margin: 10px auto;
+    }
+
+    .PostCommentsTextbox {
+        width: 100%;
+    }
+
+    .PostFooter {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .CommentEmojiPopup {
+        left: 0;
+        width: 100%;
+    }
+}
